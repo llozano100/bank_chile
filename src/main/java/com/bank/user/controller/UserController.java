@@ -3,7 +3,6 @@ package com.bank.user.controller;
 import com.bank.user.dto.request.UserDto;
 import com.bank.user.dto.response.UserResponse;
 import com.bank.user.service.UserService;
-import io.swagger.annotations.ApiOperation;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -20,7 +19,6 @@ public class UserController {
         this.userService = userService;
     }
 
-    @ApiOperation(value = "This method is used to create a new user")
     @PostMapping("/user")
     public ResponseEntity<?> createUser(@RequestBody UserDto userDto){
 
